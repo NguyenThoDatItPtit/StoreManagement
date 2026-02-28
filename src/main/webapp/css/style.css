@@ -1,69 +1,166 @@
+
 body{
-    font-family: Arial, Helvetica, sans-serif;
-    background:#f4f6f9;
+    font-family:'Segoe UI', Arial;
+    background:#f1f4f9;
     margin:0;
 }
 
-/* Navbar */
-.navbar{
-    background:#2c3e50;
-    padding:15px;
-}
 
-.navbar a{
-    color:white;
-    margin-right:15px;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-/* Container */
 .container{
-    width:60%;
-    margin:30px auto;
+    width:75%;
+    margin:40px auto;
     background:white;
-    padding:25px;
-    border-radius:8px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
-
-/* Form */
-input{
-    width:100%;
-    padding:8px;
-    margin:8px 0;
-}
-
-button{
-    background:#3498db;
-    color:white;
-    border:none;
-    padding:10px 15px;
-    cursor:pointer;
-    border-radius:5px;
-}
-
-button:hover{
-    background:#2980b9;
-}
-
-/* Table */
-table{
-    width:100%;
-    border-collapse:collapse;
-}
-
-th{
-    background:#3498db;
-    color:white;
-}
-
-th,td{
-    padding:10px;
-    border:1px solid #ddd;
-    text-align:center;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.08);
 }
 
 h2{
     text-align:center;
+    margin-bottom:25px;
+    color:#2c3e50;
+}
+
+
+.product-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.product-table th{
+    background:#34495e;
+    color:white;
+    padding:12px;
+}
+
+.product-table td{
+    padding:12px;
+    border-bottom:1px solid #eee;
+    text-align:center;
+}
+
+.product-table tr:hover{
+    background:#f9fbfd;
+}
+
+
+.action{
+    text-align:center;
+}
+.action button {
+    margin: 0 5px;
+}
+
+.action-group{
+    display:flex;
+    justify-content:center;
+    gap:8px;
+}
+
+/* BUTTON BASE */
+.btn-icon{
+    display:flex;
+    align-items:center;
+    gap:6px;
+
+    padding:7px 14px;
+    border-radius:8px;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:500;
+    color:white;
+
+    transition:all 0.25s ease;
+}
+
+/* EDIT BUTTON */
+.edit-btn{
+    background:#2ecc71;
+}
+
+.edit-btn:hover{
+    background:#27ae60;
+    transform:translateY(-2px);
+    box-shadow:0 5px 12px rgba(0,0,0,0.2);
+}
+
+/* DELETE BUTTON */
+.delete-btn{
+    background:#e74c3c;
+}
+
+.delete-btn:hover{
+    background:#c0392b;
+    transform:translateY(-2px);
+    box-shadow:0 5px 12px rgba(0,0,0,0.2);
+}
+
+
+.btn{
+    padding:8px 16px;
+    border-radius:6px;
+    text-decoration:none;
+    color:white;
+    background:#3498db;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#21618c;
+}
+
+
+.form-card{
+    width:40%;
+}
+
+.form{
+    display:flex;
+    flex-direction:column;
+}
+
+label{
+    margin-top:12px;
+    font-weight:bold;
+    color:#2c3e50;
+}
+
+.form input{
+    padding:10px;
+    margin-top:5px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    transition:0.3s;
+}
+
+.form input:focus{
+    border-color:#3498db;
+    outline:none;
+    box-shadow:0 0 5px rgba(52,152,219,0.4);
+}
+
+.form-action{
+    margin-top:20px;
+    display:flex;
+    gap:10px;
+}
+
+/* UPDATE */
+.update{
+    background:#27ae60;
+    color:white;
+}
+
+.update:hover{
+    background:#1e8449;
+}
+
+/* CANCEL */
+.cancel{
+    background:#95a5a6;
+    color:white;
+}
+
+.cancel:hover{
+    background:#7f8c8d;
 }

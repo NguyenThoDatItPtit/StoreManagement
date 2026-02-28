@@ -53,4 +53,36 @@ public class UserDAO {
 
 		return false;
 	}
+	
+	public boolean isUserExists(String username, String email, String phone) {
+
+	    String sql = "SELECT * FROM users WHERE username=? OR email=? OR phone=?";
+
+	    try (Connection con = DBConnect.getConnection()) {
+
+	        PreparedStatement ps = con.prepareStatement(sql);
+
+	        ps.setString(1, username);
+	        ps.setString(2, email);
+	        ps.setString(3, phone);
+
+	        ResultSet rs = ps.executeQuery();
+
+	        return rs.next();
+
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+
+	    return false;
+	}
+	
 }
+
+
+
+
+
+
+
+

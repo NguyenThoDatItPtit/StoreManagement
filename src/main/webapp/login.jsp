@@ -16,5 +16,5 @@
 </form>
 
 <br>
-<a href="register.jsp">Create Account</a>
+<br><a href="register.jsp"><button>Create Account</button></a> </br>
 </div>

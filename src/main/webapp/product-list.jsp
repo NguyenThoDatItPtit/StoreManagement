@@ -1,44 +1,54 @@
 <%@page import="java.util.*,model.Product"%>
 
+<link rel="stylesheet"
+	href="${pageContext.request.contextPath}/css/style.css">
+
 <%
 List<Product> list = (List<Product>) request.getAttribute("list");
 %>
 
-<h2>Product List</h2>
+<div class="container">
 
-<table border="1">
-	<tr>
-		<th>ID</th>
-		<th>Name</th>
-		<th>Price</th>
-		<th>Quantity</th>
-		<th>Action</th>
-	</tr>
+	<h2>Product Management</h2>
 
-	<%
-	for (Product p : list) {
-	%>
+	<table class="product-table">
 
-	<tr>
-		<td><%=p.getId()%></td>
-		<td><%=p.getName()%></td>
-		<td><%=p.getPrice()%></td>
-		<td><%=p.getQuantity()%></td>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Price</th>
+			<th>Quantity</th>
+			<th>Action</th>
+		</tr>
 
-		<td><a href="products?action=edit&id=<%=p.getId()%>">
-				<button>Edit</button>
-		</a> <a href="products?action=delete&id=<%=p.getId()%>"
-			onclick="return confirm('Delete?')">
-				<button>Delete</button>
-		</a></td>
+		<%
+		for (Product p : list) {
+		%>
 
-	</tr>
+		<tr>
+			<td><%=p.getId()%></td>
+			<td><%=p.getName()%></td>
+			<td>$ <%=p.getPrice()%></td>
+			<td><%=p.getQuantity()%></td>
 
-	<%
-	}
-	%>
+			<td class="action">
+				<div class="action-group">
 
-</table>
+					<a class="action-a" href="products?action=edit&id=<%=p.getId()%>"><button>Edit</button></a>
+					<a href="products?action=delete&id=<%=p.getId()%>"
+						onclick="return confirm('Delete this product?')"><button>Delete</button></a>
 
-<br>
-<a href="home.jsp">Home</a>
+				</div>
+			</td>
+
+		</tr>
+
+		<%
+		}
+		%>
+
+	</table>
+
+	<br> <a href="home.jsp"><button>Home</button></a>
+
+</div>

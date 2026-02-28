@@ -1,23 +1,38 @@
 <%@page import="model.Product"%>
 
+<link rel="stylesheet" href="css/style.css">
+
 <%
-Product p =
-(Product)request.getAttribute("product");
+Product p = (Product)request.getAttribute("product");
 %>
 
-<h2>Edit Product</h2>
+<div class="container form-card">
 
-<form action="products" method="post">
+    <h2>Edit Product</h2>
 
-	<input type="hidden" name="action" value="update"> <input
-		type="hidden" name="id" value="<%=p.getId()%>"> Name: <input
-		name="name" value="<%=p.getName()%>"><br> Price: <input
-		name="price" value="<%=p.getPrice()%>"><br> Quantity: <input
-		name="quantity" value="<%=p.getQuantity()%>"><br>
+    <form action="products" method="post" class="form">
 
-	<button>Update</button>
+        <input type="hidden" name="action" value="update">
+        <input type="hidden" name="id" value="<%=p.getId()%>">
 
-</form>
+        <label>Product Name</label>
+        <input name="name" value="<%=p.getName()%>" required>
 
-<br>
-<a href="products">Back</a>
+        <label>Price</label>
+        <input type="number" step="0.01"
+               name="price"
+               value="<%=p.getPrice()%>" required>
+
+        <label>Quantity</label>
+        <input type="number"
+               name="quantity"
+               value="<%=p.getQuantity()%>" required>
+
+        <div class="form-action">
+            <button class="btn update">Update</button>
+            <a href="products" class="btn cancel"><button>Cancel</button></a>
+        </div>
+
+    </form>
+
+</div>
