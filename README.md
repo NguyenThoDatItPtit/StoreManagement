@@ -1,5 +1,5 @@
-Project: Hệ thống Quản lý Cửa hàng Sách (Book Store Management System)
-Công nghệ: Java, JSP/Servlet, JDBC, MySQL, MVC
+Project: Hệ thống Quản lý Cửa hàng Sách (Book Store Management System).
+Công nghệ: Java, JSP/Servlet, JDBC, MySQL, MVC.
 1. Phát triển ứng dụng web quản lý cửa hàng sách sử dụng Java Web (JSP/Servlet).
 2. Xây dựng chức năng quản lý sách gồm thêm, chỉnh sửa, xóa và hiển thị danh sách.
 3. Thiết kế và chuẩn hóa cơ sở dữ liệu MySQL.
