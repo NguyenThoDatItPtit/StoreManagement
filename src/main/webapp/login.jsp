@@ -1,20 +1,38 @@
 <%@ page contentType="text/html;charset=UTF-8"
          pageEncoding="UTF-8"%>
-<link rel="stylesheet" href="css/style.css">
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/css/style.css">
+</head>
+
+<body>
 
 <div class="container">
-<h2>Login</h2>
+    <h2>Login</h2>
 
-<form action="login" method="post">
-    Username:
-    <input name="username">
+    <form action="login" method="post" class="form">
+        <label>Username</label>
+        <input name="username">
 
-    Password:
-    <input type="password" name="password">
+        <label>Password</label>
+        <input type="password" name="password">
 
-    <button>Login</button>
-</form>
+        <div class="form-action">
+            <button class="btn">Login</button>
+        </div>
+    </form>
 
-<br>
-<br><a href="register.jsp"><button>Create Account</button></a> </br>
+    <br>
+
+    <a href="register.jsp" class="btn">Create Account</a>
+
 </div>
+
+</body>
+</html>

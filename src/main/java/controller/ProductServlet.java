@@ -94,7 +94,7 @@ public class ProductServlet extends HttpServlet {
 
             dao.insert(p);
 
-            // ⭐ reload list
+            // reload list
             response.sendRedirect("products");
         }
 

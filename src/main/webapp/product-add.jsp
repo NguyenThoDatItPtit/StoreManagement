@@ -1,22 +1,50 @@
-<link rel="stylesheet" href="css/style.css">
+<%@ page contentType="text/html;charset=UTF-8"
+         pageEncoding="UTF-8"%>
 
-<div class="container">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Add Product</title>
 
-	<h2>Add Product</h2>
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/css/style.css">
+</head>
 
-	<form action="products" method="post">
+<body>
 
-		Name: <input name="name"> Price: <input name="price">
+<div class="container form-card">
 
-		Installment: <input name="installment"> Quantity: <input
-			name="quantity"> Category: <input name="category">
+    <h2>Add Product</h2>
 
-		Description: <input name="description">
+    <form action="products" method="post" class="form">
 
-		<button>Add Product</button>
+        <label>Name</label>
+        <input name="name" required>
 
-	</form>
+        <label>Price</label>
+        <input name="price" required>
 
-	<br> <a href="home.jsp"><button>Home</button></a>
+        <label>Installment</label>
+        <input name="installment">
+
+        <label>Quantity</label>
+        <input name="quantity">
+
+        <label>Category</label>
+        <input name="category">
+
+        <label>Description</label>
+        <input name="description">
+
+        <div class="form-action">
+            <button class="btn update">Add Product</button>
+            <a href="home.jsp" class="btn cancel">Home</a>
+        </div>
+
+    </form>
 
 </div>
+
+</body>
+</html>

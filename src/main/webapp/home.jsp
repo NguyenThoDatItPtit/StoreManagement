@@ -1,18 +1,33 @@
-<%@ page contentType="text/html;charset=UTF-8"
-         pageEncoding="UTF-8"%>
-<link rel="stylesheet" href="css/style.css">
+<%@ page contentType="text/html;charset=UTF-8" pageEncoding="UTF-8"%>
 
-<div class="navbar">
-    <a href="home.jsp">Home</a>
-    <a href="products">Products</a>
-    <a href="product-add.jsp">Add Product</a>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Home - Store Management</title>
 
-<div class="container">
-    <h2>Store Management System</h2>
+<link rel="stylesheet"
+      href="${pageContext.request.contextPath}/css/style.css">
+</head>
+<body>
 
-    <p>Welcome to Product Management Website</p>
+	<div class="navbar">
+		<a href="home.jsp" class="active">Home</a> <a href="products">Products</a>
+		<a href="product-add.jsp">Add Product</a>
+	</div>
 
-    <a href="products"><button>View Products</button></a>
-    <a href="product-add.jsp"><button>Add Product</button></a>
-</div>
+	<!-- CONTENT -->
+	<div class="container">
+		<h2>Store Management System</h2>
+
+		<p style="text-align: center;">Welcome to Product Management
+			Website</p>
+
+		<div class="action-group">
+			<a href="products" class="btn">View Products</a> <a
+				href="product-add.jsp" class="btn">Add Product</a>
+		</div>
+	</div>
+
+</body>
+</html>
